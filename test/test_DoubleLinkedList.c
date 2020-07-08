@@ -26,7 +26,7 @@ tail--->item1
 void test_DoubleLinkedList_add_item_to_head_given_item2_expext_item2_added_to_head_and_tail_still_points_to_item1_and_item1_next_and_item2_prev_point_to_NULL()
 {
 	//set up fixture or test enviroment
-    ListItem			item1={NULL.NULL,30};
+    ListItem			item1={NULL,NULL,30};
 	ListItem 			item2={NULL,NULL,50};
 	DoubleLinkedList	list={&item1,&item2,1};				//added item 1 to head
 	int count = DoubleLinkedListAddItemToHead(&list,&item2);//add item2 to head
@@ -53,7 +53,7 @@ tail--->item2
 void test_DoubleLinkedList_add_item_to_tail_given_item2_expext_item2_added_to_tail_and_head_still_points_to_item1_and_item2_next_and_item1prev_point_to_NULL()
 {
 	
-	ListItem			item1={NULL.NULL,20};
+	ListItem			item1={NULL,NULL,20};
 	ListItem 			item2={NULL,NULL,30};
 	DoubleLinkedList	list={&item1,&item2,1};				//added item 1 to head
 	int count = DoubleLinkedListAddItemToHead(&list,&item2);//add item2 to tail

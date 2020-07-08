@@ -3,23 +3,23 @@
 
 int DoubleLinkedListAddItemToHead(DoubleLinkedList *list, ListItem *Item){
 	Item->next = list->head;
-	*(list->head).prev = item;
-	list-> head = item;
+	(list->head)->prev = Item;
+	list-> head = Item;
 	item->prev = NULL;
 	list->count = count+1;
 	return list->count
 }
 
 int DoubleLinkedListAddItemToTail(DoubleLinkedList *listPtr, ListItem *ItemPtr){
-	itemptr.prev = listPtr->tail;
-	*(list->head).next = ItemPtr;
-	list-> tail = ItemPtr;
+	Itemptr.prev = listPtr->tail;
+	*(listPtr->head).next = ItemPtr;
+	listPtr-> tail = ItemPtr;
 	ItemPtr->next = NULL;
 	listPtr->count = count+1;
-	return listPtr->count
+	return listPtr->count;
 }	
 
-ListItem* DoubleLinkedListRemoveItemFromHead(DoubleLinkedList *rmvList);{
+ListItem* DoubleLinkedListRemoveItemFromHead(DoubleLinkedList *rmvList){
 	ListItem* Item_last;
 	
 	if(rmvList->head == NULL) 
