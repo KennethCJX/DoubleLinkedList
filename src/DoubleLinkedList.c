@@ -5,17 +5,17 @@ int DoubleLinkedListAddItemToHead(DoubleLinkedList *list, ListItem *Item){
 	Item->next = list->head;
 	(list->head)->prev = Item;
 	list-> head = Item;
-	item->prev = NULL;
-	list->count = count+1;
-	return list->count
+	Item->prev = NULL;
+	list->count = list->count+1;
+	return list->count;
 }
 
 int DoubleLinkedListAddItemToTail(DoubleLinkedList *listPtr, ListItem *ItemPtr){
-	Itemptr.prev = listPtr->tail;
-	*(listPtr->head).next = ItemPtr;
+	ItemPtr->prev = listPtr->tail;
+	(listPtr->head)->next = ItemPtr;
 	listPtr-> tail = ItemPtr;
 	ItemPtr->next = NULL;
-	listPtr->count = count+1;
+	listPtr->count = listPtr->count+1;
 	return listPtr->count;
 }	
 
