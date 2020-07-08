@@ -69,7 +69,7 @@ void test_DoubleLinkedList_add_item_to_tail_given_item2_expext_item2_added_to_ta
 	TEST_ASSERT_EQUAL(30,item2.data);
 }
 
-/*void test_DoubleLinkedList_remove_item_from_head_given_empty_list_expected_NULL()
+/*void test_DoubleLinkedList_remove_item_from_head_given_list_expected_Item_last_to_be_remove_from_head()
 {
 	ListItem			item1={NULL.NULL,20};
 	ListItem 			item2={NULL,NULL,30};

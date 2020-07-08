@@ -18,7 +18,7 @@ struct DoubleLinkedList{
 
 int DoubleLinkedListAddItemToHead(DoubleLinkedList *list, ListItem *Item);
 int DoubleLinkedListAddItemToTail(DoubleLinkedList *listPtr, ListItem *ItemPtr);
-ListItem* DoubleLinkedListRemoveItemFromHead(DoubleLinkedList *);
-ListItem* DoubleLinkedListRemoveItemFromTail(DoubleLinkedList *);
+ListItem* DoubleLinkedListRemoveItemFromHead(DoubleLinkedList *rmvList);
+ListItem* DoubleLinkedListRemoveItemFromTail(DoubleLinkedList *rmvList);
 
 #endif // DOUBLELINKEDLIST_H
