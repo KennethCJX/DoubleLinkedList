@@ -28,22 +28,22 @@ ListItem* DoubleLinkedListRemoveItemFromHead(DoubleLinkedList *rmvList)
 ListItem* Item_last;
 
 	if(rmvList->head == NULL) 
-  {			                
-		return NULL;					        
-	}
+{			                
+	return NULL;					        
+}
   else
-  {
-     Item_last = rmvList->head;			        
-     rmvList->head = Item_last->next;		                
-		if(rmvList->head == NULL)			        
-			rmvList->tail = NULL;
-		else
-      (rmvList->head)->prev = NULL;
-      Item_last->next = NULL;				        
-      Item_last->prev = NULL;
-      rmvList->count  = rmvList->count-1;				        
-	}
-	return Item_last;					        
+{
+  Item_last = rmvList->head;			        
+  rmvList->head = Item_last->next;		                
+	if(rmvList->head == NULL)			        
+		rmvList->tail = NULL;
+	else
+    (rmvList->head)->prev = NULL;
+    Item_last->next = NULL;				        
+    Item_last->prev = NULL;
+    rmvList->count  = rmvList->count-1;				        
+}
+ return Item_last;					        
 }
 
 ListItem* DoubleLinkedListRemoveItemFromTail(DoubleLinkedList *rmvList)
@@ -51,21 +51,21 @@ ListItem* DoubleLinkedListRemoveItemFromTail(DoubleLinkedList *rmvList)
 	ListItem* Item_last;
 
 	if(rmvList->tail == NULL) 
-  {			                
-		return NULL;					        
-	}
+{			                
+	return NULL;					        
+}
   else
-  {
-     Item_last = rmvList->tail;			        
-     rmvList->tail = Item_last->prev;		                
-		if(rmvList->tail == NULL)			        
-			rmvList->head = NULL;
-		else
+{
+  Item_last = rmvList->tail;			        
+  rmvList->tail = Item_last->prev;		                
+	if(rmvList->tail == NULL)			        
+		rmvList->head = NULL;
+	else
     ((rmvList->tail)->next) = NULL;
-      Item_last->next = NULL;				        
-      Item_last->prev = NULL;
-      rmvList->count  = rmvList->count-1;						        
+    Item_last->next = NULL;				        
+    Item_last->prev = NULL;
+    rmvList->count  = rmvList->count-1;						        
 	}
-	return Item_last;					        
+ return Item_last;					        
 }
 
