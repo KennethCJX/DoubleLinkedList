@@ -91,8 +91,8 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_head_given_list_expected_nothing_to_be_remove_from_head_and_head_tail_point_to_NULL()
 {
- ListItem             *rmv_Item;
- DoubleLinkedList	list ={NULL,NULL,0};
+ ListItem              *rmv_Item;
+ DoubleLinkedList list ={NULL,NULL,0};
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
 //Test the double linked list
  TEST_ASSERT_EQUAL_PTR(NULL,list.head);
