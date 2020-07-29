@@ -91,10 +91,10 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_head_given_list_expected_nothing_to_be_remove_from_head_and_head_tail_point_to_NULL()
 {
- ListItem          *rmv_Item;
+ ListItem         *rmv_Item;
  DoubleLinkedList	list ={NULL,NULL,0};
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
-	//Test the double linked list
+//Test the double linked list
  TEST_ASSERT_EQUAL_PTR(NULL,list.head);
  TEST_ASSERT_EQUAL_PTR(NULL,list.tail);
  TEST_ASSERT_EQUAL(0,list.count);
@@ -119,13 +119,13 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_head_given_item1_expected_item1_to_be_removed_and_return_subsequently_head_and_tail_point_to_NULL()
 {
- ListItem          *rmv_Item;
+ ListItem         *rmv_Item;
  ListItem			    item1={NULL,NULL,34};
  DoubleLinkedList	list={&item1,&item1,1};
  item1.next=NULL;
  item1.prev=NULL;
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
-  //Test the double linked list
+ //Test the double linked list
  TEST_ASSERT_EQUAL_PTR(NULL,list.head);
  TEST_ASSERT_EQUAL_PTR(NULL,list.tail);
  TEST_ASSERT_EQUAL_PTR(NULL,item1.next);
@@ -154,7 +154,7 @@ count=1
 
 void test_DoubleLinkedList_remove_item_from_head_given_item2_expected_item2_to_be_removed_and_return_subsequently_and_head_tail_point_to_item1()
 {
- ListItem          *rmv_Item;
+ ListItem         *rmv_Item;
  ListItem			    item1={NULL,NULL,16};
  ListItem			    item2={NULL,NULL,28};
  DoubleLinkedList	list={&item2,&item1,2};
@@ -165,7 +165,7 @@ void test_DoubleLinkedList_remove_item_from_head_given_item2_expected_item2_to_b
  item2.prev = NULL;
 
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
-  //Test the double linked list
+ //Test the double linked list
  TEST_ASSERT_EQUAL_PTR(&item1,list.head);
  TEST_ASSERT_EQUAL_PTR(&item1,list.tail);
  TEST_ASSERT_EQUAL_PTR(NULL,item1.next);
@@ -194,10 +194,10 @@ count=2
 
 void test_DoubleLinkedList_remove_item_from_head_given_item3_expected_item3_to_be_removed_and_return_subsequently_and_head_point_to_item2_and_tail_point_to_item1()
 {
- ListItem          *rmv_Item;
+ ListItem         *rmv_Item;
  ListItem			    item1={NULL,NULL,15};
  ListItem			    item2={NULL,NULL,32};
- ListItem          item3={NULL,NULL,54};
+ ListItem         item3={NULL,NULL,54};
 
  item1.next = NULL;
  item1.prev = &item2;
@@ -208,7 +208,7 @@ void test_DoubleLinkedList_remove_item_from_head_given_item3_expected_item3_to_b
 
  DoubleLinkedList	list={&item3,&item1,3};
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
-  //Test the double linked list
+ //Test the double linked list
  TEST_ASSERT_EQUAL_PTR(&item1, list.tail);
  TEST_ASSERT_EQUAL_PTR(&item2, list.head);
  TEST_ASSERT_EQUAL_PTR(&item3, rmv_Item);
@@ -235,10 +235,10 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_tail_given_list_expected_nothing_to_be_remove_from_head_and_head_tail_point_to_NULL()
 {
- ListItem          *rmv_Item;
- DoubleLinkedList	list ={NULL,NULL,0};
+ ListItem         *rmv_Item;
+ DoubleLinkedList list ={NULL,NULL,0};
  rmv_Item = DoubleLinkedListRemoveItemFromTail(&list);
-	//Test the double linked list
+//Test the double linked list
  TEST_ASSERT_EQUAL_PTR(NULL,list.head);
  TEST_ASSERT_EQUAL_PTR(NULL,list.tail);
  TEST_ASSERT_EQUAL(0,list.count);
@@ -264,14 +264,14 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_tail_given_item2_expected_item2_to_be_removed_and_return_subsequently_and_head_tail_point_to_NULL()
 {
- ListItem          *rmv_Item;
+ ListItem         *rmv_Item;
  ListItem			    item1={NULL,NULL,16};
  item1.next=NULL;
  item1.prev=NULL;
 
  DoubleLinkedList	list={&item1,&item1,1};
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
-  //Test the double linked list
+ //Test the double linked list
  TEST_ASSERT_EQUAL_PTR(NULL,list.head);
  TEST_ASSERT_EQUAL_PTR(NULL,list.tail);
  TEST_ASSERT_EQUAL_PTR(NULL,item1.next);
