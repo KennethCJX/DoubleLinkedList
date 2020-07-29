@@ -91,7 +91,7 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_head_given_list_expected_nothing_to_be_remove_from_head_and_head_tail_point_to_NULL()
 {
- ListItem         *rmv_Item;
+ ListItem           *rmv_Item;
  DoubleLinkedList	list ={NULL,NULL,0};
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
 //Test the double linked list
@@ -119,9 +119,9 @@ count=0
 
 void test_DoubleLinkedList_remove_item_from_head_given_item1_expected_item1_to_be_removed_and_return_subsequently_head_and_tail_point_to_NULL()
 {
- ListItem           *rmv_Item;
- ListItem			      item1={NULL,NULL,34};
- DoubleLinkedList	  list={&item1,&item1,1};
+ ListItem         *rmv_Item;
+ ListItem         item1={NULL,NULL,34};
+ DoubleLinkedList         list={&item1,&item1,1};
  item1.next=NULL;
  item1.prev=NULL;
  rmv_Item = DoubleLinkedListRemoveItemFromHead(&list);
@@ -154,9 +154,9 @@ count=1
 
 void test_DoubleLinkedList_remove_item_from_head_given_item2_expected_item2_to_be_removed_and_return_subsequently_and_head_tail_point_to_item1()
 {
- ListItem           *rmv_Item;
- ListItem			      item1={NULL,NULL,16};
- ListItem			      item2={NULL,NULL,28};
+ ListItem             *rmv_Item;
+ ListItem			    item1={NULL,NULL,16};
+ ListItem			    item2={NULL,NULL,28};
  DoubleLinkedList	  list={&item2,&item1,2};
 
  item1.next = NULL;
